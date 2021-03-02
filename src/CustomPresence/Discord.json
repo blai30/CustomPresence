@@ -1,0 +1,20 @@
+﻿{
+    "Discord": {
+        "ClientId": 815728717207961630,
+        "Details": "Pokemon Brilliant Diamond",
+        "State": "Gym Badges",
+        "StartTimestamp": null,
+        "EndTimestamp": null,
+        "LargeImageKey": "pokemon_brilliant_diamond",
+        "LargeImageText": "Pokemon Brilliant Diamond",
+        "SmallImageKey": "nintendo_switch",
+        "SmallImageText": "Nintendo Switch",
+        "PartyId": null,
+        "PartySize": 3,
+        "PartyMax": 8,
+        "MatchSecret": null,
+        "SpectateSecret": null,
+        "JoinSecret": null,
+        "Instance": null
+    }
+}

@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+        <OutputType>Exe</OutputType>
+        <Authors>Brian Lai</Authors>
+        <Description>Application using Discord Game SDK.</Description>
+        <AssemblyName>CustomPresence</AssemblyName>
+        <RootNamespace>CustomPresence</RootNamespace>
+        <Nullable>disable</Nullable>
+        <PackageId>CustomPresence</PackageId>
+        <Title>CustomPresence</Title>
+        <Product>CustomPresence</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="appsettings.Development.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="appsettings.Production.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="discord_game_sdk.dll">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Discord.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="appsettings.Example.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\Extensions\Extensions.csproj" />
+    </ItemGroup>
+
+</Project>
