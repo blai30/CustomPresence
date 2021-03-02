@@ -26,5 +26,17 @@ namespace CustomPresence.Services
                 await Task.Delay(1000, stoppingToken);
             }
         }
+
+        public override async Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation($"{GetType().Name} started");
+            await base.StartAsync(cancellationToken);
+        }
+
+        public override async Task StopAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation($"{GetType().Name} stopped");
+            await base.StopAsync(cancellationToken);
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Extensions;
-using Serilog;
+using Microsoft.Extensions.Logging;
 
 namespace CustomPresence
 {
@@ -27,7 +27,12 @@ namespace CustomPresence
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("Discord.json", false)
                     .Build())
-                .UseSerilog()
+                .ConfigureLogging(builder =>
+                {
+                    builder
+                        .ClearProviders()
+                        .AddConsole();
+                })
                 .UseStartup<Startup>()
                 ;
 

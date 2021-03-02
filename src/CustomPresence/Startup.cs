@@ -4,7 +4,6 @@ using Discord;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Serilog;
 
 namespace CustomPresence
 {
@@ -13,11 +12,6 @@ namespace CustomPresence
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
-            Log.Logger = new LoggerConfiguration()
-                .ReadFrom.Configuration(Configuration)
-                .Enrich.FromLogContext()
-                .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }

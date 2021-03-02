@@ -18,5 +18,28 @@
         public string? SpectateSecret { get; set; }
         public string? JoinSecret { get; set; }
         public bool? Instance { get; set; }
+
+        public override string ToString()
+        {
+            return
+                $"{GetType().Name}\n" +
+                $"\tClientId: {ClientId.ToString()}\n" +
+                $"\tDetails: {Details}\n" +
+                $"\tState: {State}\n" +
+                $"\tStartTimestamp: {StartTimestamp.ToString()}\n" +
+                $"\tEndTimestamp: {EndTimestamp.ToString()}\n" +
+                $"\tLargeImageKey: {LargeImageKey}\n" +
+                $"\tLargeImageText: {LargeImageText}\n" +
+                $"\tSmallImageKey: {SmallImageKey}\n" +
+                $"\tSmallImageText: {SmallImageText}\n" +
+                $"\tPartyId: {PartyId}\n" +
+                $"\tPartySize: {PartySize.ToString()}\n" +
+                $"\tPartyMax: {PartyMax.ToString()}\n" +
+                $"\tMatchSecret: {MatchSecret}\n" +
+                $"\tSpectateSecret: {SpectateSecret}\n" +
+                $"\tJoinSecret: {JoinSecret}\n" +
+                $"\tInstance: {Instance.ToString()}\n"
+                ;
+        }
     }
 }

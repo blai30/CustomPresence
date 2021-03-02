@@ -70,9 +70,10 @@ namespace CustomPresence.Services
                 }
             });
 
+            _logger.LogInformation(options.ToString());
+
             _logger.LogInformation($"{GetType().Name} started");
             await Task.CompletedTask;
-            _logger.LogInformation($"Activity state set: {activity.State}");
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
